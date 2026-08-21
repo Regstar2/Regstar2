@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="20" role="img" aria-label="↓ 4.6k">
+  <title>↓ 4.6k</title>
+  <g shape-rendering="crispEdges">
+    <rect width="20" height="20" fill="#21262d"/>
+    <rect x="20" width="37" height="20" fill="#1f6feb"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
+    <text x="10" y="14">↓</text>
+    <text x="38.5" y="14">4.6k</text>
+  </g>
+</svg>
