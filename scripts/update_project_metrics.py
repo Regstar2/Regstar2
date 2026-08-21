@@ -61,33 +61,24 @@ def segment_width(text: str, minimum: int = 22) -> int:
     return max(minimum, 9 + len(text) * 7)
 
 
-def render_svg(stars: int, downloads: int) -> str:
-    star_value = compact(stars)
+def render_svg(downloads: int) -> str:
     download_value = compact(downloads)
 
     icon_w = 20
-    star_w = segment_width(star_value)
     download_w = segment_width(download_value)
-    total_w = icon_w + star_w + icon_w + download_w
+    total_w = icon_w + download_w
+    download_x = icon_w + download_w / 2
 
-    star_x = icon_w + star_w / 2
-    download_icon_x = icon_w + star_w
-    download_x = download_icon_x + icon_w + download_w / 2
-
-    label = f"★ {star_value} · ↓ {download_value}"
+    label = f"↓ {download_value}"
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{total_w}" height="20" role="img" aria-label="{label}">
   <title>{label}</title>
   <g shape-rendering="crispEdges">
     <rect width="20" height="20" fill="#21262d"/>
-    <rect x="20" width="{star_w}" height="20" fill="#6e7681"/>
-    <rect x="{20 + star_w}" width="20" height="20" fill="#21262d"/>
-    <rect x="{40 + star_w}" width="{download_w}" height="20" fill="#1f6feb"/>
+    <rect x="20" width="{download_w}" height="20" fill="#1f6feb"/>
   </g>
   <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
-    <text x="10" y="14">★</text>
-    <text x="{star_x:g}" y="14">{star_value}</text>
-    <text x="{download_icon_x + 10:g}" y="14">↓</text>
+    <text x="10" y="14">↓</text>
     <text x="{download_x:g}" y="14">{download_value}</text>
   </g>
 </svg>
@@ -97,13 +88,11 @@ def render_svg(stars: int, downloads: int) -> str:
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug, repo in PROJECTS.items():
-        metadata = github_json(f"https://api.github.com/repos/{repo}")
-        stars = int(metadata.get("stargazers_count", 0))
         downloads = release_downloads(repo)
         (OUT_DIR / f"{slug}.svg").write_text(
-            render_svg(stars, downloads), encoding="utf-8"
+            render_svg(downloads), encoding="utf-8"
         )
-        print(f"{repo}: {stars} stars, {downloads} downloads")
+        print(f"{repo}: {downloads} downloads")
 
 
 if __name__ == "__main__":

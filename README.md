@@ -54,7 +54,7 @@ Desktop · Android · Networking · Utilities
 <a href="https://github.com/Regstar2/dns-switcher"><strong>DnsSwitcher</strong></a>
 <br>
 Windows DNS manager with tray UI, diagnostics, failover and Split DNS.<br><br>
-<img src="./assets/project-metrics/dns-switcher.svg" alt="GitHub stars and release downloads" title="GitHub stars · Release downloads" align="right">
+<img src="./assets/project-metrics/dns-switcher.svg" alt="Release downloads" title="GitHub release downloads" align="right">
 <img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
 <img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
 <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="C#">
@@ -68,7 +68,7 @@ Windows DNS manager with tray UI, diagnostics, failover and Split DNS.<br><br>
 <a href="https://github.com/Regstar2/white-list-checker"><strong>WhiteListChecker</strong></a>
 <br>
 Android network diagnostics with DNS/HTTPS checks, monitoring and notifications.<br><br>
-<img src="./assets/project-metrics/white-list-checker.svg" alt="GitHub stars and release downloads" title="GitHub stars · Release downloads" align="right">
+<img src="./assets/project-metrics/white-list-checker.svg" alt="Release downloads" title="GitHub release downloads" align="right">
 <img src="https://img.shields.io/badge/-Beta-D29922?style=flat-square" alt="Beta">
 <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
@@ -85,7 +85,7 @@ Android network diagnostics with DNS/HTTPS checks, monitoring and notifications.
 <a href="https://github.com/Regstar2/wdtt-windows-home-gateway"><strong>WDTT Gateway</strong></a>
 <br>
 Windows home gateway with Docker, Direct/DNS/WARP modes and diagnostics.<br><br>
-<img src="./assets/project-metrics/wdtt-windows-home-gateway.svg" alt="GitHub stars and release downloads" title="GitHub stars · Release downloads" align="right">
+<img src="./assets/project-metrics/wdtt-windows-home-gateway.svg" alt="Release downloads" title="GitHub release downloads" align="right">
 <img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
 <img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
 <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
@@ -99,7 +99,7 @@ Windows home gateway with Docker, Direct/DNS/WARP modes and diagnostics.<br><br>
 <a href="https://github.com/Regstar2/tg-ws-proxy-android"><strong>TgWsProxy Android</strong></a>
 <br>
 Local Telegram proxy with MTProto/SOCKS5 frontends and configurable routes.<br><br>
-<img src="./assets/project-metrics/tg-ws-proxy-android.svg" alt="GitHub stars and release downloads" title="GitHub stars · Release downloads" align="right">
+<img src="./assets/project-metrics/tg-ws-proxy-android.svg" alt="Release downloads" title="GitHub release downloads" align="right">
 <img src="https://img.shields.io/badge/-Active-1F6FEB?style=flat-square" alt="Active">
 <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
