@@ -89,7 +89,7 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug, repo in PROJECTS.items():
         downloads = release_downloads(repo)
-        (OUT_DIR / f"{slug}.svg").write_text(
+        (OUT_DIR / f"{slug}-downloads.svg").write_text(
             render_svg(downloads), encoding="utf-8"
         )
         print(f"{repo}: {downloads} downloads")
