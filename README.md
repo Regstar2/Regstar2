@@ -69,7 +69,7 @@ Windows DNS manager with tray UI, diagnostics, failover and Split DNS.<br><br>
 <br>
 Android network diagnostics with DNS/HTTPS checks, monitoring and notifications.<br><br>
 <img src="./assets/project-metrics/white-list-checker-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Beta-D29922?style=flat-square" alt="Beta">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
 <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
 <img src="https://img.shields.io/badge/Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose">
