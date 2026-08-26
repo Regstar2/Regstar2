@@ -109,6 +109,25 @@ Local Telegram proxy with MTProto/SOCKS5 frontends and configurable routes.<br><
 </tr>
 
 <tr>
+<td colspan="5" width="50%" valign="top">
+
+<img src="https://raw.githubusercontent.com/Regstar2/windows-iso-builder/master/src/WindowsISOBuilder.Gui/Assets/WindowsISOBuilder.png" width="40" height="40" alt="Windows ISO Builder icon" title="Windows ISO Builder" align="middle">
+&nbsp;
+<a href="https://github.com/Regstar2/windows-iso-builder"><strong>Windows ISO Builder</strong></a>
+<br>
+Windows 10/11 ISO builder with GUI/CLI, UUP dump catalog, WIM/ESD and proxy support.<br><br>
+<img src="./assets/project-metrics/windows-iso-builder-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
+<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
+<img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell">
+<img src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET">
+
+</td>
+<td colspan="5" width="50%" valign="top">
+</td>
+</tr>
+
+<tr>
 <td colspan="10" valign="top">
 
 <details>
