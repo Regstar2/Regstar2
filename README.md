@@ -129,7 +129,7 @@ Windows 10/11 ISO builder with GUI/CLI, UUP dump catalog, WIM/ESD and proxy supp
 &nbsp;
 <a href="https://github.com/Regstar2/music-ark"><strong>MusicArk</strong></a>
 <br>
-Windows music library manager with Yandex Music matching, missing/censored version detection, metadata, downloads and recovery workflows.<br><br>
+Windows music library manager with Yandex Music sync, metadata, downloads and collection recovery.<br><br>
 <img src="./assets/project-metrics/music-ark-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
 <img src="https://img.shields.io/badge/-Beta-D29922?style=flat-square" alt="Beta">
 <img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
