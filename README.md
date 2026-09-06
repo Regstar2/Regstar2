@@ -101,6 +101,7 @@ Windows home gateway with Docker, Direct/DNS/WARP modes and diagnostics.<br><br>
 Local Telegram proxy with MTProto/SOCKS5 frontends and configurable routes.<br><br>
 <img src="./assets/project-metrics/tg-ws-proxy-android-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
 <img src="https://img.shields.io/badge/-Active-1F6FEB?style=flat-square" alt="Active">
+<img src="https://img.shields.io/badge/-Maintained%20fork-6E7781?style=flat-square" alt="Maintained fork">
 <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
 <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
@@ -135,6 +136,24 @@ Windows music library manager with Yandex Music sync, metadata, downloads and co
 <img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
 <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter">
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+
+</td>
+</tr>
+
+<tr>
+<td colspan="10" width="100%" valign="top">
+
+<img src="https://raw.githubusercontent.com/Regstar2/pwdtt/main/docs/assets/logo.png" width="40" height="40" alt="PWDTT icon" title="PWDTT" align="middle">
+&nbsp;
+<a href="https://github.com/Regstar2/pwdtt"><strong>PWDTT</strong></a>
+<br>
+Maintained PWDTT fork with VK TURN/DTLS tunneling, connection diagnostics, VK hash management and Windows reliability improvements.<br><br>
+<img src="./assets/project-metrics/pwdtt-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
+<img src="https://img.shields.io/badge/-Active-1F6FEB?style=flat-square" alt="Active">
+<img src="https://img.shields.io/badge/-Maintained%20fork-6E7781?style=flat-square" alt="Maintained fork">
+<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
 
 </td>
 </tr>

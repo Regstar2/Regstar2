@@ -10,6 +10,7 @@ PROJECTS = {
     "white-list-checker": "Regstar2/white-list-checker",
     "wdtt-windows-home-gateway": "Regstar2/wdtt-windows-home-gateway",
     "tg-ws-proxy-android": "Regstar2/tg-ws-proxy-android",
+    "pwdtt": "Regstar2/pwdtt",
     "windows-iso-builder": "Regstar2/windows-iso-builder",
     "music-ark": "Regstar2/music-ark",
 }
