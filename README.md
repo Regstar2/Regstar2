@@ -111,7 +111,7 @@ Local Telegram proxy with MTProto/SOCKS5 frontends and configurable routes.<br><
 <tr>
 <td colspan="5" width="50%" valign="top">
 
-<img src="https://raw.githubusercontent.com/Regstar2/windows-iso-builder/master/src/WindowsISOBuilder.Gui/Assets/WindowsISOBuilder.png" width="40" height="40" alt="Windows ISO Builder icon" title="Windows ISO Builder" align="middle">
+<img src="https://raw.githubusercontent.com/Regstar2/windows-iso-builder/master/src/WindowsISOBuilder.Gui/Assets/WindowsISOBuilder.svg?v=2" width="40" height="40" alt="Windows ISO Builder icon" title="Windows ISO Builder" align="middle">
 &nbsp;
 <a href="https://github.com/Regstar2/windows-iso-builder"><strong>Windows ISO Builder</strong></a>
 <br>
