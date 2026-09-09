@@ -162,11 +162,10 @@ Maintained PWDTT fork with VK TURN/DTLS tunneling, connection diagnostics, VK ha
 &nbsp;
 <a href="https://github.com/Regstar2/telegram-wsp"><strong>Telegram-WSP</strong></a>
 <br>
-Unofficial Telegram Android fork with built-in TgWsProxy, minimal upstream changes and automated signed releases.<br><br>
+Unofficial Telegram Android fork with built-in TgWsProxy, minimal upstream changes and automated signed releases.<br><br><br>
 <img src="./assets/project-metrics/telegram-wsp-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
 <img src="https://img.shields.io/badge/-MVP-D29922?style=flat-square" alt="MVP">
 <img src="https://img.shields.io/badge/-Maintained%20fork-6E7781?style=flat-square" alt="Maintained fork">
-<br>
 <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
 <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
