@@ -4,7 +4,7 @@
 
 <h1>Regstar</h1>
 
-<strong>Software Engineering student · AI-assisted developer</strong><br>
+<strong>Software Engineering student · AI-assisted developer · Love stars</strong><br>
 <br>
 Desktop · Android · Networking · Utilities
 <br>
