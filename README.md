@@ -174,6 +174,22 @@ Unofficial Telegram Android fork with built-in TgWsProxy, minimal upstream chang
 </tr>
 
 <tr>
+<td colspan="5" width="50%" valign="top">
+
+<img src="https://raw.githubusercontent.com/Regstar2/notify-mark/main/docs/assets/icon-transparent.png" width="40" height="40" alt="NotifyMark icon" title="NotifyMark" align="middle">
+&nbsp;
+<a href="https://github.com/Regstar2/notify-mark"><strong>NotifyMark</strong></a>
+<br>
+Android Markdown reminder app with local notifications, recurring tasks, calendar and Obsidian Tasks compatibility.<br><br>
+<img src="./assets/project-metrics/notify-mark-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
+<img src="https://img.shields.io/badge/-Beta-D29922?style=flat-square" alt="Beta">
+<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+
+</td>
+</tr>
+
+<tr>
 <td colspan="10" valign="top">
 
 <details>

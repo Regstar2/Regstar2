@@ -14,6 +14,7 @@ PROJECTS = {
     "pwdtt": "Regstar2/pwdtt",
     "windows-iso-builder": "Regstar2/windows-iso-builder",
     "music-ark": "Regstar2/music-ark",
+    "notify-mark": "Regstar2/notify-mark",
 }
 
 OUT_DIR = Path("assets/project-metrics")
