@@ -2,7 +2,9 @@
 
 import json
 import os
+import sys
 import urllib.request
+from fnmatch import fnmatchcase
 from pathlib import Path
 
 PROJECTS = {
@@ -15,6 +17,24 @@ PROJECTS = {
     "windows-iso-builder": "Regstar2/windows-iso-builder",
     "music-ark": "Regstar2/music-ark",
     "notify-mark": "Regstar2/notify-mark",
+}
+
+# Count only installable releases, not metadata, checksums or source archives.
+ASSET_PATTERNS = {
+    "dns-switcher": ("DnsSwitcher-*-win-x64-setup.exe", "DnsSwitcher-*-win-x64.zip"),
+    "white-list-checker": ("WhiteListChecker-*.apk",),
+    "wdtt-windows-home-gateway": ("wdtt-windows-home-gateway-*-windows-x64.zip",),
+    "tg-ws-proxy-android": ("TgWsProxy-Android-*.apk", "tgwsproxy*.apk"),
+    "telegram-wsp": ("Telegram-WSP-release.apk",),
+    "pwdtt": (
+        "pwdtt-linux-amd64",
+        "PWDTT-macos.zip",
+        "pwdtt-windows-amd64-setup.exe",
+        "pwdtt-windows-amd64.exe",
+    ),
+    "windows-iso-builder": ("windows-iso-builder-v*.exe", "windows-iso-builder-v*.zip"),
+    "music-ark": ("MusicArk-*-win-x64.zip", "MusicArk-Setup-*-x64.exe"),
+    "notify-mark": ("NotifyMark-*.apk",),
 }
 
 OUT_DIR = Path("assets/project-metrics")
@@ -34,7 +54,15 @@ def github_json(url: str):
         return json.load(response)
 
 
-def release_downloads(repo: str) -> int:
+def matches_download_asset(name: str, patterns: tuple[str, ...]) -> bool:
+    # Source archives can otherwise match a broad ZIP distributable pattern.
+    lower_name = name.lower()
+    if any(marker in lower_name for marker in ("-source", "_source", "-src")):
+        return False
+    return any(fnmatchcase(name, pattern) for pattern in patterns)
+
+
+def release_downloads(repo: str, patterns: tuple[str, ...]) -> int:
     total = 0
     page = 1
     while True:
@@ -44,8 +72,18 @@ def release_downloads(repo: str) -> int:
         if not releases:
             break
         for release in releases:
-            for asset in release.get("assets", []):
-                total += int(asset.get("download_count", 0))
+            assets = release.get("assets", [])
+            matched = [
+                asset for asset in assets
+                if matches_download_asset(asset.get("name", ""), patterns)
+            ]
+            if assets and not matched:
+                print(
+                    f"Warning: no installable assets matched for {repo} "
+                    f"release {release.get('tag_name', '<unknown>')}",
+                    file=sys.stderr,
+                )
+            total += sum(int(asset.get("download_count", 0)) for asset in matched)
         if len(releases) < 100:
             break
         page += 1
@@ -91,9 +129,11 @@ def render_svg(downloads: int) -> str:
 
 
 def main() -> None:
+    if set(PROJECTS) != set(ASSET_PATTERNS):
+        raise ValueError("Every project must have a corresponding asset filter")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug, repo in PROJECTS.items():
-        downloads = release_downloads(repo)
+        downloads = release_downloads(repo, ASSET_PATTERNS[slug])
         (OUT_DIR / f"{slug}-downloads.svg").write_text(
             render_svg(downloads), encoding="utf-8"
         )
