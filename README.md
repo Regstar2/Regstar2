@@ -187,6 +187,23 @@ Android Markdown reminder app with local notifications, recurring tasks, calenda
 <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
 
 </td>
+<td colspan="5" width="50%" valign="top">
+
+<img src="https://raw.githubusercontent.com/Regstar2/text-quest-anthology/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="40" height="40" alt="Text Quest Anthology icon" title="Text Quest Anthology" align="middle">
+&nbsp;
+<a href="https://github.com/Regstar2/text-quest-anthology"><strong>Text Quest Anthology</strong></a>
+<br>
+Android interactive horror anthology. Play Zavalinka with branching choices, multiple endings, offline reading and local saves.<br><br>
+<img src="https://img.shields.io/badge/-MVP-D29922?style=flat-square" alt="MVP">
+<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
+<img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React Native">
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+<img src="https://img.shields.io/badge/Ink-6E7781?style=flat-square" alt="Ink">
+<br>
+<a href="https://regstar2.github.io/projects/text-quest-anthology/">Project page ↗</a>
+
+</td>
+
 </tr>
 
 <tr>
