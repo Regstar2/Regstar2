@@ -22,6 +22,7 @@ class ProjectMetricsTests(unittest.TestCase):
             "windows-iso-builder": ["windows-iso-builder-v1.0.0.exe", "windows-iso-builder-v1.0.0.zip"],
             "music-ark": ["MusicArk-1.0.0-win-x64.zip", "MusicArk-Setup-1.0.0-x64.exe"],
             "notify-mark": ["NotifyMark-v0.10.1-beta.1.apk"],
+            "text-quest-anthology": ["text-quest-anthology-v0.4.0-rc.2.apk", "text-quest-anthology-v0.4.0-rc.1-qf1.apk", "text-quest-anthology-v0.1.8.apk"],
         }
         for slug, names in expected.items():
             for name in names:
@@ -37,11 +38,49 @@ class ProjectMetricsTests(unittest.TestCase):
             "Telegram-WSP-overlay-source-12.10.6.zip",
             "windows-iso-builder-v1.0.0.zip.sha256",
             "windows-iso-builder-v1.0.0-source.zip",
+            "text-quest-anthology-v0.4.0-rc.2.aab",
+            "text-quest-anthology-v0.4.0-rc.2.apk.sha256",
         ]
         for slug, patterns in metrics.ASSET_PATTERNS.items():
             for name in ignored:
                 with self.subTest(slug=slug, name=name):
                     self.assertFalse(metrics.matches_download_asset(name, patterns))
+
+    def test_text_quest_counts_only_apk_assets_across_releases(self):
+        releases = [
+            {
+                "tag_name": "v0.4.0-rc.2",
+                "assets": [
+                    {"name": "text-quest-anthology-v0.4.0-rc.2.apk", "download_count": 2},
+                    {"name": "text-quest-anthology-v0.4.0-rc.2.aab", "download_count": 50},
+                ],
+            },
+            {
+                "tag_name": "v0.4.0-rc.1",
+                "assets": [
+                    {"name": "text-quest-anthology-v0.4.0-rc.1.apk", "download_count": 3},
+                ],
+            },
+            {
+                "tag_name": "v0.4.0-rc.1-qf1",
+                "assets": [
+                    {"name": "text-quest-anthology-v0.4.0-rc.1-qf1.apk", "download_count": 2},
+                    {"name": "latest.json", "download_count": 2006},
+                ],
+            },
+            {
+                "tag_name": "v0.1.8",
+                "assets": [
+                    {"name": "text-quest-anthology-v0.1.8.apk", "download_count": 1},
+                ],
+            },
+        ]
+        with patch.object(metrics, "github_json", return_value=releases):
+            count = metrics.release_downloads(
+                "Regstar2/text-quest-anthology",
+                metrics.ASSET_PATTERNS["text-quest-anthology"],
+            )
+        self.assertEqual(count, 8)
 
     def test_release_downloads_excludes_metadata_across_pages(self):
         release = lambda n: {"tag_name": "v1", "assets": [

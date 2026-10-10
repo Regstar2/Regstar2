@@ -17,6 +17,7 @@ PROJECTS = {
     "windows-iso-builder": "Regstar2/windows-iso-builder",
     "music-ark": "Regstar2/music-ark",
     "notify-mark": "Regstar2/notify-mark",
+    "text-quest-anthology": "Regstar2/text-quest-anthology",
 }
 
 # Count only installable releases, not metadata, checksums or source archives.
@@ -35,6 +36,7 @@ ASSET_PATTERNS = {
     "windows-iso-builder": ("windows-iso-builder-v*.exe", "windows-iso-builder-v*.zip"),
     "music-ark": ("MusicArk-*-win-x64.zip", "MusicArk-Setup-*-x64.exe"),
     "notify-mark": ("NotifyMark-*.apk",),
+    "text-quest-anthology": ("text-quest-anthology-v*.apk",),
 }
 
 OUT_DIR = Path("assets/project-metrics")
