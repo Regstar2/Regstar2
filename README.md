@@ -55,10 +55,7 @@ Desktop · Android · Networking · Utilities
 <br>
 Windows DNS manager with tray UI, diagnostics, failover and Split DNS.<br><br>
 <img src="./assets/project-metrics/dns-switcher-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
-<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
-<img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="C#">
-<img src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">&nbsp;<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">&nbsp;<img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="C#">&nbsp;<img src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET">
 
 </td>
 <td colspan="5" width="50%" valign="top">
@@ -69,10 +66,7 @@ Windows DNS manager with tray UI, diagnostics, failover and Split DNS.<br><br>
 <br>
 Android network diagnostics with DNS/HTTPS checks, monitoring and notifications.<br><br>
 <img src="./assets/project-metrics/white-list-checker-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
-<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
-<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
-<img src="https://img.shields.io/badge/Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">&nbsp;<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">&nbsp;<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">&nbsp;<img src="https://img.shields.io/badge/Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose">
 
 </td>
 </tr>
@@ -86,10 +80,7 @@ Android network diagnostics with DNS/HTTPS checks, monitoring and notifications.
 <br>
 Windows home gateway with Docker, Direct/DNS/WARP modes and diagnostics.<br><br>
 <img src="./assets/project-metrics/wdtt-windows-home-gateway-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
-<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
-<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">&nbsp;<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">&nbsp;<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">&nbsp;<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
 
 </td>
 <td colspan="5" width="50%" valign="top">
@@ -98,13 +89,9 @@ Windows home gateway with Docker, Direct/DNS/WARP modes and diagnostics.<br><br>
 &nbsp;
 <a href="https://github.com/Regstar2/tg-ws-proxy-android"><strong>TgWsProxy Android</strong></a>
 <br>
-Local Telegram proxy with MTProto/SOCKS5 frontends and configurable routes.<br><br>
+Maintained Android Telegram proxy fork with MTProto/SOCKS5 and configurable routes.<br><br>
 <img src="./assets/project-metrics/tg-ws-proxy-android-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
-<img src="https://img.shields.io/badge/-Maintained%20fork-6E7781?style=flat-square" alt="Maintained fork">
-<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
-<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
-<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">&nbsp;<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">&nbsp;<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">&nbsp;<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
 
 </td>
 </tr>
@@ -118,10 +105,7 @@ Local Telegram proxy with MTProto/SOCKS5 frontends and configurable routes.<br><
 <br>
 Windows 10/11 ISO builder with GUI/CLI, UUP dump catalog, WIM/ESD and proxy support.<br><br>
 <img src="./assets/project-metrics/windows-iso-builder-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
-<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
-<img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell">
-<img src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">&nbsp;<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">&nbsp;<img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell">&nbsp;<img src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET">
 
 </td>
 <td colspan="5" width="50%" valign="top">
@@ -132,10 +116,7 @@ Windows 10/11 ISO builder with GUI/CLI, UUP dump catalog, WIM/ESD and proxy supp
 <br>
 Windows music library manager with Yandex Music sync, metadata, downloads and collection recovery.<br><br>
 <img src="./assets/project-metrics/music-ark-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
-<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
-<img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter">
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">&nbsp;<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">&nbsp;<img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter">&nbsp;<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
 
 </td>
 </tr>
@@ -147,13 +128,9 @@ Windows music library manager with Yandex Music sync, metadata, downloads and co
 &nbsp;
 <a href="https://github.com/Regstar2/pwdtt"><strong>PWDTT</strong></a>
 <br>
-Maintained PWDTT fork with VK TURN/DTLS tunneling, connection diagnostics, VK hash management and Windows reliability improvements.<br><br>
+Maintained PWDTT fork with VK TURN/DTLS, VK hash management, diagnostics and Windows fixes.<br><br>
 <img src="./assets/project-metrics/pwdtt-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
-<img src="https://img.shields.io/badge/-Maintained%20fork-6E7781?style=flat-square" alt="Maintained fork">
-<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">
-<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">&nbsp;<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows">&nbsp;<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">&nbsp;<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
 
 </td>
 <td colspan="5" width="50%" valign="top">
@@ -162,13 +139,9 @@ Maintained PWDTT fork with VK TURN/DTLS tunneling, connection diagnostics, VK ha
 &nbsp;
 <a href="https://github.com/Regstar2/telegram-wsp"><strong>Telegram-WSP</strong></a>
 <br>
-Unofficial Telegram Android fork with built-in TgWsProxy, minimal upstream changes and automated signed releases.<br><br><br>
+Maintained unofficial Telegram Android fork with built-in TgWsProxy and automated signed releases.<br><br>
 <img src="./assets/project-metrics/telegram-wsp-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">
-<img src="https://img.shields.io/badge/-Maintained%20fork-6E7781?style=flat-square" alt="Maintained fork">
-<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
-<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
-<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/badge/-Stable-238636?style=flat-square" alt="Stable">&nbsp;<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">&nbsp;<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">&nbsp;<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
 
 </td>
 </tr>
@@ -182,9 +155,7 @@ Unofficial Telegram Android fork with built-in TgWsProxy, minimal upstream chang
 <br>
 Android Markdown reminder app with local notifications, recurring tasks, calendar and Obsidian Tasks compatibility.<br><br>
 <img src="./assets/project-metrics/notify-mark-downloads.svg" alt="Release downloads" title="GitHub release downloads" align="right">
-<img src="https://img.shields.io/badge/-Beta-D29922?style=flat-square" alt="Beta">
-<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
-<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+<img src="https://img.shields.io/badge/-Beta-D29922?style=flat-square" alt="Beta">&nbsp;<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">&nbsp;<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
 
 </td>
 <td colspan="5" width="50%" valign="top">
@@ -193,14 +164,8 @@ Android Markdown reminder app with local notifications, recurring tasks, calenda
 &nbsp;
 <a href="https://github.com/Regstar2/text-quest-anthology"><strong>Text Quest Anthology</strong></a>
 <br>
-Android interactive horror anthology. Play Zavalinka with branching choices, multiple endings, offline reading and local saves.<br><br>
-<img src="https://img.shields.io/badge/-MVP-D29922?style=flat-square" alt="MVP">
-<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
-<img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React Native">
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-<img src="https://img.shields.io/badge/Ink-6E7781?style=flat-square" alt="Ink">
-<br>
-<a href="https://regstar2.github.io/projects/text-quest-anthology/">Project page ↗</a>
+Android horror anthology with branching Zavalinka story, multiple endings and offline saves.<br><br>
+<img src="https://img.shields.io/badge/-MVP-D29922?style=flat-square" alt="MVP">&nbsp;<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">&nbsp;<img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React Native">&nbsp;<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
 
 </td>
 
