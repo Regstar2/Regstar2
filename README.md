@@ -165,6 +165,7 @@ Android Markdown reminder app with local notifications, recurring tasks, calenda
 <a href="https://github.com/Regstar2/text-quest-anthology"><strong>Text Quest Anthology</strong></a>
 <br>
 Android horror anthology with branching Zavalinka story, multiple endings and offline saves.<br><br>
+<img src="./assets/project-metrics/text-quest-anthology-downloads.svg" alt="Release downloads" title="GitHub APK release downloads" align="right">
 <img src="https://img.shields.io/badge/-MVP-D29922?style=flat-square" alt="MVP">&nbsp;<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">&nbsp;<img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React Native">&nbsp;<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
 
 </td>
