@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Test metrics asset filters
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
       - name: Update metrics
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
