@@ -2,8 +2,10 @@
 
 import json
 import os
+import re
 import sys
 import urllib.request
+from decimal import Decimal
 from fnmatch import fnmatchcase
 from pathlib import Path
 
@@ -72,6 +74,8 @@ def release_downloads(repo: str, patterns: tuple[str, ...]) -> int:
             f"https://api.github.com/repos/{repo}/releases?per_page=100&page={page}"
         )
         if not releases:
+            if page == 1:
+                print(f"Warning: no releases returned by GitHub API for {repo}", file=sys.stderr)
             break
         for release in releases:
             assets = release.get("assets", [])
@@ -130,16 +134,51 @@ def render_svg(downloads: int) -> str:
 '''
 
 
+def previous_download_lower_bound(path: Path) -> int | None:
+    """Lowest count compatible with the previous compact SVG badge."""
+    if not path.exists():
+        return None
+
+    match = re.search(
+        r'aria-label="↓ ([0-9]+(?:\.[0-9]+)?)([km]?)"',
+        path.read_text(encoding="utf-8"),
+    )
+    if not match:
+        raise ValueError(f"Cannot read existing download metric: {path}")
+
+    amount, suffix = match.groups()
+    if not suffix:
+        return int(amount)
+
+    scale = {"k": 1_000, "m": 1_000_000}[suffix]
+    # compact() rounds to one decimal place, hiding up to half a step.
+    # For "3k" the count must also have reached the k range.
+    return max(scale, int((Decimal(amount) - Decimal("0.05")) * scale))
+
+
 def main() -> None:
     if set(PROJECTS) != set(ASSET_PATTERNS):
         raise ValueError("Every project must have a corresponding asset filter")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    totals = {}
     for slug, repo in PROJECTS.items():
         downloads = release_downloads(repo, ASSET_PATTERNS[slug])
+        path = OUT_DIR / f"{slug}-downloads.svg"
+        previous_floor = previous_download_lower_bound(path)
+        if previous_floor is not None and downloads < previous_floor:
+            raise RuntimeError(
+                f"{repo}: API reports {downloads} downloads, below the previous "
+                f"badge's minimum of {previous_floor}. Refusing to overwrite "
+                f"{path}; check GitHub Releases API/asset visibility."
+            )
+        totals[slug] = downloads
+        print(f"{repo}: {downloads} downloads")
+
+    # Validate every repository before writing any badge.
+    for slug, downloads in totals.items():
         (OUT_DIR / f"{slug}-downloads.svg").write_text(
             render_svg(downloads), encoding="utf-8"
         )
-        print(f"{repo}: {downloads} downloads")
 
 
 if __name__ == "__main__":
