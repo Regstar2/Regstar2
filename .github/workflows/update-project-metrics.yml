@@ -1,15 +1,21 @@
 name: Update project metrics
 
 on:
+  pull_request:
+    paths:
+      - "scripts/update_project_metrics.py"
+      - "tests/test_update_project_metrics.py"
+      - ".github/workflows/update-project-metrics.yml"
+      - "assets/project-metrics/**"
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  update:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,8 +26,23 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Test metrics asset filters
+      - name: Test metrics asset filters and guards
         run: python -m unittest discover -s tests -p 'test_*.py'
+
+  update:
+    needs: test
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
       - name: Update metrics
         env:
