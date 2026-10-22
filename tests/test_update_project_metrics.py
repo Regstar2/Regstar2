@@ -1,6 +1,7 @@
 import sys
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -106,6 +107,61 @@ class ProjectMetricsTests(unittest.TestCase):
         badge = metrics.render_svg(1134)
         self.assertIn("↓ 1.1k", badge)
         self.assertIn('<svg xmlns="http://www.w3.org/2000/svg"', badge)
+
+    def test_previous_download_lower_bound_from_compact_badge(self):
+        cases = [(995, 995), (2881, 2850), (2956, 2950), (1000000, 1000000)]
+        with TemporaryDirectory() as directory:
+            badge = Path(directory) / "downloads.svg"
+            for actual, lower_bound in cases:
+                with self.subTest(actual=actual):
+                    badge.write_text(metrics.render_svg(actual), encoding="utf-8")
+                    self.assertEqual(metrics.previous_download_lower_bound(badge), lower_bound)
+
+    def test_missing_releases_does_not_zero_a_valid_badge(self):
+        with TemporaryDirectory() as directory:
+            output = Path(directory)
+            badge = output / "telegram-wsp-downloads.svg"
+            previous = metrics.render_svg(2881)
+            badge.write_text(previous, encoding="utf-8")
+            with patch.object(metrics, "OUT_DIR", output), patch.object(
+                metrics, "PROJECTS", {"telegram-wsp": "Regstar2/telegram-wsp"}
+            ), patch.object(
+                metrics, "ASSET_PATTERNS", {"telegram-wsp": ("Telegram-WSP-release.apk",)}
+            ), patch.object(metrics, "github_json", return_value=[]):
+                with self.assertRaisesRegex(RuntimeError, "Refusing to overwrite"):
+                    metrics.main()
+            self.assertEqual(badge.read_text(encoding="utf-8"), previous)
+
+    def test_partial_release_result_is_rejected_atomically(self):
+        with TemporaryDirectory() as directory:
+            output = Path(directory)
+            first = output / "first-downloads.svg"
+            second = output / "second-downloads.svg"
+            first.write_text(metrics.render_svg(10), encoding="utf-8")
+            old_second = metrics.render_svg(2881)
+            second.write_text(old_second, encoding="utf-8")
+            with patch.object(metrics, "OUT_DIR", output), patch.object(
+                metrics, "PROJECTS", {"first": "owner/first", "second": "owner/second"}
+            ), patch.object(
+                metrics, "ASSET_PATTERNS", {"first": ("*.apk",), "second": ("*.apk",)}
+            ), patch.object(metrics, "release_downloads", side_effect=[11, 150]):
+                with self.assertRaisesRegex(RuntimeError, "owner/second"):
+                    metrics.main()
+            self.assertEqual(first.read_text(encoding="utf-8"), metrics.render_svg(10))
+            self.assertEqual(second.read_text(encoding="utf-8"), old_second)
+
+    def test_valid_download_increase_updates_badge(self):
+        with TemporaryDirectory() as directory:
+            output = Path(directory)
+            badge = output / "telegram-wsp-downloads.svg"
+            badge.write_text(metrics.render_svg(2881), encoding="utf-8")
+            with patch.object(metrics, "OUT_DIR", output), patch.object(
+                metrics, "PROJECTS", {"telegram-wsp": "Regstar2/telegram-wsp"}
+            ), patch.object(
+                metrics, "ASSET_PATTERNS", {"telegram-wsp": ("Telegram-WSP-release.apk",)}
+            ), patch.object(metrics, "release_downloads", return_value=2956):
+                metrics.main()
+            self.assertEqual(badge.read_text(encoding="utf-8"), metrics.render_svg(2956))
 
 
 if __name__ == "__main__":
